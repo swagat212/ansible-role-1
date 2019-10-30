@@ -1,0 +1,8 @@
+- name: copy index from files to host
+  copy:
+    src: files/index.html
+    dest: /var/www/html
+  notify: restart apache
+- name: give docker permission
+  shell: 'usermod -aG docker ec2-user'
+

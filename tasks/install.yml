@@ -1,0 +1,9 @@
+- name: installing apache
+  yum:
+    name: httpd
+    state: present
+- name: installing docker
+  yum:
+   name: docker
+   state: present
+
